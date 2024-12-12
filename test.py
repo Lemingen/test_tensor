@@ -37,8 +37,12 @@ fun(path)
 
 with alive_bar(len(counter)) as bar:
     for i in counter:
-        #os.remove(i)
-        bar()
+        if '.' in i:
+            os.remove(i)
+            bar()
+        else:
+            os.rmdir(i)
+            bar()
 
 for key, value in lib.items():
     print(f'Файл типа: .{key} был удалён: {value} раз(а)')
