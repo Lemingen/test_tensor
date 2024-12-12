@@ -17,8 +17,6 @@ def fun(path):
                 else:
                     lib[extension] = 1
 
-                #print(f'Удалён файл: {path}/{i}')
-                #os.remove(f"{path}/{i}")
                 counter.append(f"{path}/{i}")
 
             else:
@@ -29,8 +27,6 @@ def fun(path):
                 else:
                     lib["dir"] = 1
 
-                #print(f'Удалена папка: {path}/{i}')
-                #os.remove(f"{path}/{i}")
                 counter.append(f"{path}/{i}")
 
 fun(path)
