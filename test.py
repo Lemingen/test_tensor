@@ -31,6 +31,9 @@ def fun(path):
 
 fun(path)
 
+for key, value in lib.items():
+    print(f'Файл типа: .{key} был удалён: {value} раз(а)')
+
 with alive_bar(len(counter)) as bar:
     for i in counter:
         if '.' in i:
@@ -39,6 +42,3 @@ with alive_bar(len(counter)) as bar:
         else:
             os.rmdir(i)
             bar()
-
-for key, value in lib.items():
-    print(f'Файл типа: .{key} был удалён: {value} раз(а)')
