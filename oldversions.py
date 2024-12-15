@@ -1,5 +1,6 @@
 import sys
 import os
+import shutil
 
 source = sys.argv[1]
 version = sys.argv[2]
@@ -21,4 +22,4 @@ def funk(lst, version):
 lst_new = funk(lst, version)
 
 for i in lst_new:
-    print(f"{source}/{i}")
+    shutil.rmtree(f"{source}/{i}")
