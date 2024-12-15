@@ -28,8 +28,6 @@ for i in lst_arch:
     part.pop(0)
     parts.append(part)
 
-print(parts)
-
 def make(path2):
     for i in parts:
         path2_save = path2
@@ -40,14 +38,12 @@ def make(path2):
             if i[j].count('.') == 1:
                 with open(path2, 'w', encoding='utf-8') as file:
                     file.write('')
-                print(f"{path2} создаю файл")
 
             elif not os.path.exists(path2):
-                print(f"Папка ещё '{path2}' не уже существует. Создаю.")
                 os.makedirs(path2)
 
             else:
-                print(f"Папка '{path2}' уже существует.")
+                pass #папка уже создана
         path2 = path2_save
 
 make(path2)
