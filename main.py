@@ -19,8 +19,6 @@ for i in lib[1:]:
     difference_in_seconds = difference.total_seconds()
     stat.append(difference_in_seconds)
 
-print(stat)
-
 def find_median(stat):
     sorted_stat = sorted(stat)
     n = len(sorted_stat)
@@ -52,6 +50,6 @@ print(f"Максимальное время обработки запроса = 
 print(f"Среднее арифметическое = {sum(stat)/ len(stat)} секунд")
 print(f"Медианное значение = {find_median(stat)} секунд")
 print(f"Процент ошибочных запросов = {(count/ (len(lib)-1)) * 100}%")
-
+print()
 for key, value in lib1.items():
     print(f'Локация: {key}, число вызовов: {value}')
